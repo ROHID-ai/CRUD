@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add User</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .login-box {
+            width: 320px;
+            padding: 30px;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #000;
+            border-radius: 5px;
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #000;
+            background: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="login-box">
+    <h2>Add User</h2>
+
+    <form action="/add" method="post">
+        <div class="input-group">
+            <label>Name</label>
+            <input type="text" name="name" required>
+        </div>
+
+        <div class="input-group">
+            <label>Email</label>
+            <input type="text" name="email" required>
+        </div>
+
+        <div class="input-group">
+            <label>Mobile No</label>
+            <input type="number" name="mobile_no" required>
+        </div>
+
+        <div class="input-group">
+            <label>City</label>
+            <input type="text" name="city" required>
+        </div>
+
+        <button type="submit" class="login-button">Add User</button>
+    </form>
+</div>
+</body>
+</html>

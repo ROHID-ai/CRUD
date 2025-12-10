@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CRUD App</title>
+    <style>
+        body { text-align: center; font-family: Arial; }
+        table {
+            margin: auto;
+            width: 70%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        th {
+            background-color: #ddd;
+        }
+        .box {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background: #f9f9f9;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        a {
+            text-decoration: none;
+            color: blue;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<h2>User Records</h2>
+<div class="box">
+
+<a href="/add">Add New User</a><br><br>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>City</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for user in users %}
+    <tr>
+        <td>{{ user[1] }}</td>
+        <td>{{ user[2] }}</td>
+        <td>{{ user[3] }}</td>
+        <td>{{ user[4] }}</td>
+        <td>
+            <a href="/update/{{ user[0] }}">Edit</a> |
+            <a href="/delete/{{ user[0] }}">Delete</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+
+</body>
+</html>
